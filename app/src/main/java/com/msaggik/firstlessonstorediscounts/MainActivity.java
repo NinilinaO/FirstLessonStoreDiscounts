@@ -7,24 +7,24 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // задание полей
-    float matPlat = 100; // материнская плата с процессором
-    byte matPlatDiscount = 45; // скидка (в процентах)
-    float ram = 41; // оперативная память
-    byte ramDiscount = 55;
-    float rom = 39; // SSD (постоянная память)
-    byte romDiscount = 30;
-    float cooler = 12; // башенный кулер
-    byte coolerDiscount = 25;
-    float caseAndPower = 21; // корпус и блок питания
-    byte caseAndPowerDiscount = 32;
-    float account = 160; // счёт пользователя
+    float coat = 70;
+    byte coatDiscount = 77;
+    float hat = 25;
+    byte hatDiscount = 37;
+    float suit = 53;
+    byte suitDiscount = 44;
+    float shirt = 19; //
+    byte shirtDiscount = 0;
+    float shoes = 41;
+    byte shoesDiscount = 32;
+    float account = 312; // счёт пользователя
 
     // метод подсчёта стоимости серверного комплекта
     private float calculation() {
         // создание и инициализация переменной подсчёта стоимости
-        float count = (matPlat * (100 - matPlatDiscount) + ram * (100 - ramDiscount)
-                + rom * (100 - romDiscount) + cooler * (100 - coolerDiscount)
-                + caseAndPower * (100 - caseAndPowerDiscount)) / 100;
+        float count = (coat * (100 - coatDiscount) + hat * (100 - hatDiscount)
+                + suit * (100 - suitDiscount) + shirt * (100 - shirtDiscount)
+                + shoes * (100 - shoesDiscount)) / 100;
         return count; // возврат подсчитанного значения
     }
 
@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
         // запонение экрана
         if (possibility()) { // если имеется возможность купить серверный комплект
-            possibilityOut.setText("Имеется достаточно средств для покупки серверного комплекта");
+            possibilityOut.setText("Имеется достаточно средств для покупки делового гардероба");
             balanceOut.setText("Остаток от покупки " + balance() + " серебрянных монет");
         } else { // иначе
-            possibilityOut.setText("Недостаточно средств для покупки серверного комплекта");
+            possibilityOut.setText("Недостаточно средств для покупки делового гардероба");
             balanceOut.setText(" - ");
         }
     }
